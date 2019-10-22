@@ -1,22 +1,28 @@
+/**************************************************************************************************
+ * Imports
+ **************************************************************************************************/
 
-const variables = require("./variables");
-const shell     = require("shelljs");
+import { colors, symbols } from "./variables";
+import * as shell          from "shelljs";
 
-const { colors, symbols } = variables;
+
+/**************************************************************************************************
+ * Functions
+ **************************************************************************************************/
 
 // #region Color formatters
 
-exports.red    = (message) => `${colors.red}${message}${colors.clear}`;
-exports.yellow = (message) => `${colors.yellow}${message}${colors.clear}`;
-exports.purple = (message) => `${colors.purple}${message}${colors.clear}`;
-exports.white  = (message) => `${colors.white}${message}${colors.clear}`;
-exports.green  = (message) => `${colors.green}${message}${colors.clear}`;
+const red    = (message: string) => `${colors.red}${message}${colors.clear}`;
+const yellow = (message: string) => `${colors.yellow}${message}${colors.clear}`;
+const purple = (message: string) => `${colors.purple}${message}${colors.clear}`;
+const white  = (message: string) => `${colors.white}${message}${colors.clear}`;
+const green  = (message: string) => `${colors.green}${message}${colors.clear}`;
 
 // #endregion Color formatters
 
 // #region Dotnet formatters
 
-exports.dotnet = (output, toConsole = false) => {
+const dotnet = (output, toConsole = false) => {
     // NOTE: Temporarily parsing output due to shelljs.exec not preserving colored output correctly
     // See https://github.com/shelljs/shelljs/issues/86 for more info
 
@@ -46,14 +52,14 @@ exports.dotnet = (output, toConsole = false) => {
 
 // #region Spacing formatters
 
-exports.tab           = (message, times = 3) => "\t".repeat(times) + message;
-exports.tabbedNewLine = (message, times = 3) => "\n" + this.tab(message, times);
+const tab           = (message, times = 3) => "\t".repeat(times) + message;
+const tabbedNewLine = (message, times = 3) => "\n" + this.tab(message, times);
 
 // #endregion Spacing formatters
 
 // #region Jest formatters
 
-exports.jest = (output, toConsole = false) => {
+const jest = (output, toConsole = false) => {
     // NOTE: Temporarily parsing output due to shelljs.exec not preserving colored output correctly
     // See https://github.com/shelljs/shelljs/issues/86 for more info
     output = output
@@ -79,7 +85,7 @@ exports.jest = (output, toConsole = false) => {
 
 // #region Npm formatters
 
-exports.npm = (output, toConsole = false) => {
+const npm = (output, toConsole = false) => {
     // NOTE: Temporarily parsing output due to shelljs.exec not preserving colored output correctly
     // See https://github.com/shelljs/shelljs/issues/86 for more info
     output = output
@@ -101,3 +107,21 @@ exports.npm = (output, toConsole = false) => {
 };
 
 // #endregion Npm formatters
+
+
+/**************************************************************************************************
+ * Exports
+ **************************************************************************************************/
+
+export {
+    dotnet,
+    green,
+    jest,
+    npm,
+    purple,
+    red,
+    tab,
+    tabbedNewLine,
+    yellow,
+    white,
+};

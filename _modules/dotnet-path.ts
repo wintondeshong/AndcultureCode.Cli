@@ -2,21 +2,21 @@
  * Imports
  **************************************************************************************************/
 
-const echo  = require("./echo");
-const file  = require("./file");
-const path  = require("path");
-const shell = require("shelljs");
-const upath = require("upath");
+import echo       from "./echo";
+import file       from "./file";
+import * as path  from "path";
+import * as shell from "shelljs";
+import * as upath from "upath";
 
 
 /**************************************************************************************************
  * Variables
  **************************************************************************************************/
 
-let cachedCliPath;
-let cachedDataProjectPath;
-let cachedSolutionPath;
-let cachedWebProjectFilePath;
+let cachedCliPath: string;
+let cachedDataProjectPath: string;
+let cachedSolutionPath: string;
+let cachedWebProjectFilePath: string;
 
 // Wild-card searches used when finding the solution file. Ordered by most to least performant
 const solutionFilePaths = [
@@ -194,4 +194,4 @@ const dotnetPath = {
  * Exports
  **************************************************************************************************/
 
-module.exports = dotnetPath;
+export default dotnetPath;

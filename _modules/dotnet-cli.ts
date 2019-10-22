@@ -1,17 +1,16 @@
-#!/usr/bin/env node
+#!/usr/bin/env ts-node
 
 /**************************************************************************************************
  * Imports
  **************************************************************************************************/
 
-const dir                    = require("./dir");
-const echo                   = require("./echo");
-const shell                  = require("shelljs");
-const dotnetBuild            = require("./dotnet-build");
-const dotnetPath             = require("./dotnet-path");
-const formatters             = require("./formatters");
-const path                   = require("path");
-const { red, tabbedNewLine } = formatters;
+import dir                    from "./dir";
+import echo                   from "./echo";
+import * as shell             from "shelljs";
+import dotnetBuild            from "./dotnet-build";
+import dotnetPath             from "./dotnet-path";
+import { red, tabbedNewLine}  from "./formatters";
+import * as path              from "path";
 
 
 /**************************************************************************************************
@@ -52,4 +51,4 @@ const dotnetCli = {
  * Exports
  **************************************************************************************************/
 
-module.exports = dotnetCli;
+export default dotnetCli;

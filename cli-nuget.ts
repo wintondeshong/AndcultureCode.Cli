@@ -1,14 +1,14 @@
-#!/usr/bin/env node
+#!/usr/bin/env ts-node
 
 /**************************************************************************************************
  * Imports
  **************************************************************************************************/
 
-const commands      = require("./_modules/commands");
-const dotnetPath    = require("./_modules/dotnet-path");
-const echo          = require("./_modules/echo");
-const program       = require("commander");
-const shell         = require("shelljs");
+import commands      from "./_modules/commands";
+import dotnetPath    from "./_modules/dotnet-path";
+import echo          from "./_modules/echo";
+import * as program  from "commander";
+import * as shell    from "shelljs";
 
 
 /**************************************************************************************************

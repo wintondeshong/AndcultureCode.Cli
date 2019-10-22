@@ -2,8 +2,8 @@
  * Imports
  **************************************************************************************************/
 
-const variables = require("./variables");
-const shell     = require("shelljs");
+import variables  from "./variables";
+import * as shell from "shelljs";
 
 
 /**************************************************************************************************
@@ -60,4 +60,4 @@ const echo = {
  * Exports
  **************************************************************************************************/
 
-module.exports = echo;
+export default echo;

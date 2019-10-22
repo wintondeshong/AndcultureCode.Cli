@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env ts-node
 
 /**************************************************************************************************
  * Imports
@@ -11,7 +11,7 @@ import dotnetPath    from "./dotnet-path";
 import dotnetRestore from "./dotnet-restore";
 import echo          from "./echo";
 import formatters    from "./formatters";
-import shell         from "shelljs";
+import * as shell    from "shelljs";
 import variables     from "./variables";
 
 

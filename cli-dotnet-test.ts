@@ -1,17 +1,17 @@
-#!/usr/bin/env node
+#!/usr/bin/env ts-node
 
 /**************************************************************************************************
  * Imports
  **************************************************************************************************/
 
-const commands    = require("./_modules/commands");
-const dir         = require("./_modules/dir");
-const dotnetClean = require("./_modules/dotnet-clean");
-const dotnetPath  = require("./_modules/dotnet-path");
-const echo        = require("./_modules/echo");
-const formatters  = require("./_modules/formatters");
-const program     = require("commander");
-const shell       = require("shelljs");
+import commands        from "./_modules/commands";
+import dir             from "./_modules/dir";
+import dotnetClean     from "./_modules/dotnet-clean";
+import dotnetPath      from "./_modules/dotnet-path";
+import echo            from "./_modules/echo";
+import * as formatters from "./_modules/formatters";
+import * as program    from "commander";
+import * as shell      from "shelljs";
 
 
 /**************************************************************************************************

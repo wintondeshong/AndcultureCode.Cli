@@ -1,11 +1,16 @@
-#!/usr/bin/env node
+#!/usr/bin/env ts-node
 
-const dir        = require("./dir");
-const dotnetPath = require("./dotnet-path");
-const echo       = require("./echo");
-const path       = require("path");
-const shell      = require("shelljs");
-const upath      = require("upath");
+/**************************************************************************************************
+ * Imports
+ **************************************************************************************************/
+
+import dir        from "./dir";
+import dotnetPath from "./dotnet-path";
+import echo       from "./echo";
+import * as path  from "path";
+import * as shell from "shelljs";
+import * as upath from "upath";
+
 
 /**************************************************************************************************
  * Constants
@@ -124,8 +129,9 @@ const migration = {
 
 // #endregion Functions
 
+
 /**************************************************************************************************
  * Exports
  **************************************************************************************************/
 
-module.exports = migration;
+export default migration;

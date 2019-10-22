@@ -1,16 +1,16 @@
-#!/usr/bin/env node
+#!/usr/bin/env ts-node
 
 /**************************************************************************************************
  * Imports
  **************************************************************************************************/
 
-const commands      = require("./_modules/commands");
-const echo          = require("./_modules/echo");
-const file          = require("./_modules/file");
-const path          = require("path");
-const program       = require("commander");
-const shell         = require("shelljs");
-const upath         = require ("upath");
+import commands      from "./_modules/commands";
+import echo          from "./_modules/echo";
+import file          from "./_modules/file";
+import * as path     from "path";
+import * as program  from "commander";
+import * as shell    from "shelljs";
+import * as upath    from "upath";
 
 
 /**************************************************************************************************

@@ -1,14 +1,13 @@
-#!/usr/bin/env node
+#!/usr/bin/env ts-node
 
 /**************************************************************************************************
  * Imports
  **************************************************************************************************/
 
-const dir        = require("./dir");
-const dotnetPath = require("./dotnet-path");
-const echo       = require("./echo");
-const shell      = require("shelljs");
-const variables  = require("./variables");
+import dir        from "./dir";
+import dotnetPath from "./dotnet-path";
+import echo       from "./echo";
+import * as shell from "shelljs";
 
 
 /**************************************************************************************************
@@ -51,4 +50,4 @@ const dotnetPublish = {
  * Exports
  **************************************************************************************************/
 
-module.exports = dotnetPublish;
+export default dotnetPublish;
