@@ -4,15 +4,15 @@
  * Imports
  **************************************************************************************************/
 
-const dir           = require("./dir");
-const file          = require("./file");
-const dotnetClean   = require("./dotnet-clean");
-const dotnetPath    = require("./dotnet-path");
-const dotnetRestore = require("./dotnet-restore");
-const echo          = require("./echo");
-const formatters    = require("./formatters");
-const shell         = require("shelljs");
-const variables     = require("./variables");
+import dir           from "./dir";
+import file          from "./file";
+import dotnetClean   from "./dotnet-clean";
+import dotnetPath    from "./dotnet-path";
+import dotnetRestore from "./dotnet-restore";
+import echo          from "./echo";
+import formatters    from "./formatters";
+import shell         from "shelljs";
+import variables     from "./variables";
 
 
 /**************************************************************************************************
@@ -51,4 +51,4 @@ const dotnetBuild = {
  * Exports
  **************************************************************************************************/
 
-module.exports = dotnetBuild;
+export default dotnetBuild;

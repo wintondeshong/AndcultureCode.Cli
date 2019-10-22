@@ -5,7 +5,7 @@
   "bin": {
     "and-cli": "cli.js"
   },
-  "main": "ts-node cli.ts",
+  "main": "cli.js",
   "engines": {
     "node": ">=8.0.0"
   },
@@ -13,6 +13,8 @@
     "cli"
   ],
   "scripts": {
+    "build": "tsc -p cli.ts",
+    "start": "npm run build:live",
     "test": "jest --passWithNoTests"
   },
   "repository": {
@@ -32,6 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^12.11.2",
+    "@types/shelljs": "^0.8.5",
     "jest": "^24.9.0",
     "pryjs": "1.0.3",
     "ts-node": "^8.4.1",

@@ -4,12 +4,12 @@
  * Imports
  **************************************************************************************************/
 
-const dir        = require("./dir");
-const dotnetPath = require("./dotnet-path");
-const echo       = require("./echo");
-const formatters = require("./formatters");
-const shell      = require("shelljs");
-const variables  = require("./variables");
+import dir        from "./dir";
+import dotnetPath from "./dotnet-path";
+import echo       from "./echo";
+import formatters from "./formatters";
+import * as shell from "shelljs";
+import variables  from "./variables";
 
 
 /**************************************************************************************************
@@ -66,4 +66,4 @@ const dotnetClean = {
  * Exports
  **************************************************************************************************/
 
-module.exports = dotnetClean;
+export default dotnetClean;

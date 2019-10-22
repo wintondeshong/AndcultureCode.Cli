@@ -4,7 +4,7 @@
  * Imports
  **************************************************************************************************/
 
-import { commands } from "./_modules/commands";
+import commands     from "./_modules/commands";
 import * as program from "commander";
 
 

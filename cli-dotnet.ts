@@ -1,20 +1,20 @@
-#!/usr/bin/env node
+
 
 /**************************************************************************************************
  * Imports
  **************************************************************************************************/
 
-const commands      = require("./_modules/commands");
-const dir           = require("./_modules/dir");
-const dotnetBuild   = require("./_modules/dotnet-build");
-const dotnetClean   = require("./_modules/dotnet-clean");
-const dotnetCli     = require("./_modules/dotnet-cli");
-const dotnetPath    = require("./_modules/dotnet-path");
-const dotnetRestore = require("./_modules/dotnet-restore");
-const echo          = require("./_modules/echo");
-const formatters    = require("./_modules/formatters");
-const program       = require("commander");
-const shell         = require("shelljs");
+import commands      from "./_modules/commands";
+import dir           from "./_modules/dir";
+import dotnetBuild   from "./_modules/dotnet-build";
+import dotnetClean   from "./_modules/dotnet-clean";
+import dotnetCli     from "./_modules/dotnet-cli";
+import dotnetPath    from "./_modules/dotnet-path";
+import dotnetRestore from "./_modules/dotnet-restore";
+import echo          from "./_modules/echo";
+import formatters    from "./_modules/formatters";
+import * as program  from "commander";
+import * as shell    from "shelljs";
 
 
 /**************************************************************************************************
@@ -28,7 +28,7 @@ const shell         = require("shelljs");
 
 // #region Dotnet commands
 
-const dotnet = {
+export const dotnet = {
     cmd(mode) {
         return `dotnet ${mode} --no-restore`;
     },
@@ -57,7 +57,7 @@ const dotnet = {
     },
 };
 
-const dotnetKill = {
+export const dotnetKill = {
     cmds: {
         kill:                "kill --force",
         shutdownBuildServer: "dotnet build-server shutdown",

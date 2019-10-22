@@ -2,9 +2,9 @@
  * Imports
  **************************************************************************************************/
 
-const echo  = require("./echo");
-const fs    = require("fs");
-const shell = require("shelljs");
+import echo       from "./echo";
+import * as fs    from "fs";
+import * as shell from "shelljs";
 
 
 /**************************************************************************************************
@@ -27,10 +27,10 @@ const dir = {
         shell.rm("-rf", dir);
         echo.success(`Directory '${dir}' successfully deleted`);
     },
-    popd(dir) {
+    popd(dir = undefined) {
         shell.popd("-q", dir);
     },
-    pushd(dir) {
+    pushd(dir = undefined) {
         shell.pushd("-q", dir);
     }
 }
@@ -42,4 +42,4 @@ const dir = {
  * Exports
  **************************************************************************************************/
 
-module.exports = dir;
+export default dir;

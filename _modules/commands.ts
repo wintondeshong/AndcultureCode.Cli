@@ -1,4 +1,4 @@
-export const commands = {
+const commands = {
     deploy: {
         command:     "deploy",
         description: "Deploy various application types",
@@ -24,3 +24,5 @@ export const commands = {
         description: "Manages publishing of nuget dotnet core projects",
     },
 };
+
+export default commands;
