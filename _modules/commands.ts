@@ -1,4 +1,4 @@
-module.exports = {
+export const commands = {
     deploy: {
         command:     "deploy",
         description: "Deploy various application types",

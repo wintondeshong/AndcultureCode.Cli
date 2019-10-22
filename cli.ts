@@ -1,11 +1,11 @@
-#!/usr/bin/env node
+#!/usr/bin/env ts-node
 
 /**************************************************************************************************
  * Imports
  **************************************************************************************************/
 
-const commands  = require("./_modules/commands");
-const program   = require("commander");
+import { commands } from "./_modules/commands";
+import * as program from "commander";
 
 
 /**************************************************************************************************
