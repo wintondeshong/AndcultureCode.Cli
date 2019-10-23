@@ -1,9 +1,8 @@
 {
   "author": "andculture <developer+code@andculture.com> (http://andculture.com)",
   "bin": {
-    "and-cli": "lib/cli.js"
+    "and-cli": "./lib/cli.js"
   },
-
   "dependencies": {
     "archiver": "3.1.1",
     "chalk": "^2.4.1",
@@ -18,6 +17,7 @@
     "@types/node": "^12.11.2",
     "@types/shelljs": "^0.8.5",
     "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
     "pryjs": "1.0.3",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.4"
@@ -30,15 +30,19 @@
     "cli"
   ],
   "license": "Apache-2.0",
-  "main": "lib/cli.js",
+  "main": "./lib/cli.js",
   "name": "and-cli",
   "repository": {
     "type": "git",
     "url": "git@github.com:AndcultureCode/AndcultureCode.Cli.git"
   },
   "scripts": {
-    "build": "tsc",
-    "test": "jest --passWithNoTests"
+    "build": "rm -rf lib && tsc -p .",
+    "create": "npm run build && npm run test",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/cli.ts",
+    "test": "jest --passWithNoTests",
+    "test:live": "npm i -g && and-cli"
   },
   "types": "lib/cli.d.ts",
   "version": "0.1.0"
