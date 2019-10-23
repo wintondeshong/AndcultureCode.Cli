@@ -4,8 +4,8 @@
  * Imports
  **************************************************************************************************/
 
-import commands     from "./_modules/commands";
-import * as program from "commander";
+import commands from "./_modules/commands";
+import program  from "commander";
 
 
 /**************************************************************************************************

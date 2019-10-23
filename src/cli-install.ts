@@ -49,7 +49,7 @@ const install = {
 
         // Developer alias
         echo.message("Configuring cli development `and-cli-dev` bash alias...");
-        const pathToCli      = upath.toUnix(path.join(shell.pwd().toString(), "cli.js"));
+        const pathToCli      = upath.toUnix(path.join(shell.pwd().toString(), "src", "cli.ts"));
         const developerAlias = `alias and-cli-dev='${pathToCli}'`;
 
         if (shell.cat(file.bashFile()).grep(developerAlias).stdout.length > 1) {
