@@ -2,8 +2,8 @@
  * Imports
  **************************************************************************************************/
 
-import variables  from "./variables";
-import * as shell from "shelljs";
+import * as variables from "./variables";
+import * as shell     from "shelljs";
 
 
 /**************************************************************************************************

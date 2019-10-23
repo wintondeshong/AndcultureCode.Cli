@@ -2,9 +2,9 @@
  * Imports
  **************************************************************************************************/
 
-import * as archiver from "archiver";
-import echo          from "./echo";
-import * as fs       from "fs";
+import archiver from "archiver";
+import echo     from "./echo";
+import * as fs  from "fs";
 
 
 /**************************************************************************************************

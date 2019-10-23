@@ -4,12 +4,11 @@
  * Imports
  **************************************************************************************************/
 
-import dir        from "./dir";
-import dotnetPath from "./dotnet-path";
-import echo       from "./echo";
-import formatters from "./formatters";
-import * as shell from "shelljs";
-import variables  from "./variables";
+import dir             from "./dir";
+import dotnetPath      from "./dotnet-path";
+import echo            from "./echo";
+import * as formatters from "./formatters";
+import * as shell      from "shelljs";
 
 
 /**************************************************************************************************

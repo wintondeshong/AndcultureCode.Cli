@@ -1,4 +1,4 @@
-exports.colors = {
+export const colors = {
     clear:  "\033[0m",
     green:  "\033[0;32m",
     purple: "\033[1;35m",
@@ -7,7 +7,7 @@ exports.colors = {
     yellow: "\033[1;33m"
 };
 
-exports.symbols = {
+export const symbols = {
     checkmark: "√",
     o:         "○",
     x:         "×",

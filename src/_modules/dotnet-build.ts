@@ -4,15 +4,12 @@
  * Imports
  **************************************************************************************************/
 
-import dir           from "./dir";
-import file          from "./file";
-import dotnetClean   from "./dotnet-clean";
-import dotnetPath    from "./dotnet-path";
-import dotnetRestore from "./dotnet-restore";
-import echo          from "./echo";
-import formatters    from "./formatters";
-import * as shell    from "shelljs";
-import variables     from "./variables";
+import dotnetClean     from "./dotnet-clean";
+import dotnetPath      from "./dotnet-path";
+import dotnetRestore   from "./dotnet-restore";
+import echo            from "./echo";
+import * as formatters from "./formatters";
+import * as shell      from "shelljs";
 
 
 /**************************************************************************************************

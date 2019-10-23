@@ -3,7 +3,7 @@
   "bin": {
     "and-cli": "lib/cli.js"
   },
-  "build": "tsc",
+
   "dependencies": {
     "archiver": "3.1.1",
     "chalk": "^2.4.1",
@@ -37,8 +37,7 @@
     "url": "git@github.com:AndcultureCode/AndcultureCode.Cli.git"
   },
   "scripts": {
-    "build": "tsc -p cli.ts",
-    "start": "npm run build:live",
+    "build": "tsc",
     "test": "jest --passWithNoTests"
   },
   "types": "lib/cli.d.ts",
