@@ -1,31 +1,10 @@
 {
-  "name": "and-cli",
-  "version": "0.1.0",
-  "description": "and-cli command-line tool to manage the development of software applications",
-  "bin": {
-    "and-cli": "cli.js"
-  },
-  "main": "cli.js",
-  "engines": {
-    "node": ">=8.0.0"
-  },
-  "keywords": [
-    "cli"
-  ],
-  "scripts": {
-    "build": "tsc -p cli.ts",
-    "start": "npm run build:live",
-    "test": "jest --passWithNoTests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:AndcultureCode/AndcultureCode.Cli.git"
-  },
   "author": "andculture <developer+code@andculture.com> (http://andculture.com)",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/AndcultureCode/AndcultureCode.Cli#readme",
+  "bin": {
+    "and-cli": "lib/cli.js"
+  },
+  "build": "tsc",
   "dependencies": {
-    "@types/archiver": "^3.0.0",
     "archiver": "3.1.1",
     "chalk": "^2.4.1",
     "commander": "^2.15.1",
@@ -33,12 +12,35 @@
     "shelljs": "^0.8.2",
     "upath": "^1.1.2"
   },
+  "description": "and-cli command-line tool to manage the development of software applications",
   "devDependencies": {
+    "@types/archiver": "^3.0.0",
     "@types/node": "^12.11.2",
     "@types/shelljs": "^0.8.5",
     "jest": "^24.9.0",
     "pryjs": "1.0.3",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.4"
-  }
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "homepage": "https://github.com/AndcultureCode/AndcultureCode.Cli#readme",
+  "keywords": [
+    "cli"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib/cli.js",
+  "name": "and-cli",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AndcultureCode/AndcultureCode.Cli.git"
+  },
+  "scripts": {
+    "build": "tsc -p cli.ts",
+    "start": "npm run build:live",
+    "test": "jest --passWithNoTests"
+  },
+  "types": "lib/cli.d.ts",
+  "version": "0.1.0"
 }

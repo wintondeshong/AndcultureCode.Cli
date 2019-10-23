@@ -1,20 +1,20 @@
-
+#!/usr/bin/env ts-node
 
 /**************************************************************************************************
  * Imports
  **************************************************************************************************/
 
-import commands      from "./_modules/commands";
-import dir           from "./_modules/dir";
-import dotnetBuild   from "./_modules/dotnet-build";
-import dotnetClean   from "./_modules/dotnet-clean";
-import dotnetCli     from "./_modules/dotnet-cli";
-import dotnetPath    from "./_modules/dotnet-path";
-import dotnetRestore from "./_modules/dotnet-restore";
-import echo          from "./_modules/echo";
-import formatters    from "./_modules/formatters";
-import * as program  from "commander";
-import * as shell    from "shelljs";
+import commands        from "./_modules/commands";
+import dir             from "./_modules/dir";
+import dotnetBuild     from "./_modules/dotnet-build";
+import dotnetClean     from "./_modules/dotnet-clean";
+import dotnetCli       from "./_modules/dotnet-cli";
+import dotnetPath      from "./_modules/dotnet-path";
+import dotnetRestore   from "./_modules/dotnet-restore";
+import echo            from "./_modules/echo";
+import * as formatters from "./_modules/formatters";
+import * as program    from "commander";
+import * as shell      from "shelljs";
 
 
 /**************************************************************************************************
